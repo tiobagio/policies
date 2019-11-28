@@ -1,0 +1,88 @@
+{
+  "revision_id": "be882f8e34cca2f009f03aefac7e3d935c73a1eab674f53adfd5550763cf39ec",
+  "name": "base_win",
+  "run_list": [
+    "recipe[chef-client::default]"
+  ],
+  "included_policy_locks": [
+
+  ],
+  "cookbook_locks": {
+    "chef-client": {
+      "version": "11.0.4",
+      "identifier": "8b4eaeaea946d05ffe93b6870eaffe7d6d95dc0d",
+      "dotted_decimal_identifier": "39211533924386512.27020033163464367.279814662904845",
+      "cache_key": "chef-client-11.0.4-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/chef-client/versions/11.0.4/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/chef-client/versions/11.0.4/download",
+        "version": "11.0.4"
+      }
+    },
+    "cron": {
+      "version": "6.2.2",
+      "identifier": "602e43b375c9dd2dc5f4540b50f34c1fe6692ab7",
+      "dotted_decimal_identifier": "27072466072750557.12884027124699379.83699893349047",
+      "cache_key": "cron-6.2.2-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/cron/versions/6.2.2/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/cron/versions/6.2.2/download",
+        "version": "6.2.2"
+      }
+    },
+    "logrotate": {
+      "version": "2.2.2",
+      "identifier": "bd20a5c5c2c06cb301f5903e61fe3749357a7755",
+      "dotted_decimal_identifier": "53234666957881452.50386175029830142.60787569358677",
+      "cache_key": "logrotate-2.2.2-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/logrotate/versions/2.2.2/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/logrotate/versions/2.2.2/download",
+        "version": "2.2.2"
+      }
+    }
+  },
+  "default_attributes": {
+    "chef_client": {
+      "interval": "120",
+      "splay": "30"
+    }
+  },
+  "override_attributes": {
+
+  },
+  "solution_dependencies": {
+    "Policyfile": [
+      [
+        "chef-client",
+        "= 11.0.4"
+      ],
+      [
+        "cron",
+        "= 6.2.2"
+      ],
+      [
+        "logrotate",
+        "= 2.2.2"
+      ]
+    ],
+    "dependencies": {
+      "chef-client (11.0.4)": [
+        [
+          "cron",
+          ">= 4.2.0"
+        ],
+        [
+          "logrotate",
+          ">= 1.9.0"
+        ]
+      ],
+      "cron (6.2.2)": [
+
+      ],
+      "logrotate (2.2.2)": [
+
+      ]
+    }
+  }
+}
